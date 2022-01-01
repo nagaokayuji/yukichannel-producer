@@ -1,2 +1,0 @@
-/usr/bin/ar qc libkvspicState.a CMakeFiles/kvspicState.dir/src/state/src/State.c.o
-/usr/bin/ranlib libkvspicState.a
