@@ -1,5 +1,5 @@
 
-## 準備
+## install
 ```shell
 sudo apt update
 sudo apt upgrade -y
@@ -21,4 +21,11 @@ AWS_REGION=ap-northeast-1
 KVS_STREAM_NAME= ...
 GST_PLUGIN_PATH= path to build
 LD_LIBRARY_PATH= path to lib
+```
+
+
+## run
+```shell
+git clone https://github.com/nagaokayuji/yukichannel-producer.git
+sh run.sh
 ```
