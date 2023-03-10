@@ -18,14 +18,14 @@ make
 AWS_ACCESS_KEY= ...
 AWS_SECRET_ACCESS_KEY= ...
 AWS_REGION=ap-northeast-1
-KVS_STREAM_NAME= ...
-GST_PLUGIN_PATH= path to build
-LD_LIBRARY_PATH= path to lib
+KVS_STREAM_NAME=yukichannelXX
+GST_PLUGIN_PATH=<path to build> (~/amazon-kinesis-video-streams-producer-sdk-cpp/build)
+LD_LIBRARY_PATH=<path to lib> (~/amazon-kinesis-video-streams-producer-sdk-cpp/open-source/local/lib)
 ```
 
 
 ## run
 ```shell
 git clone https://github.com/nagaokayuji/yukichannel-producer.git
-sh run.sh
+sh yukichannel-producer/run.sh
 ```
