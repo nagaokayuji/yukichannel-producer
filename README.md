@@ -53,3 +53,11 @@ EnvironmentFile=/etc/sysconfig/root
 WantedBy = multi-user.target
 
 ```
+
+```shell
+sudo systemctl daemon-reload
+sudo systemctl start yukichannel
+
+# enable on startup
+sudo systemctl enable yukichannel
+```
