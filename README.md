@@ -15,8 +15,8 @@ make
 
 ### env
 ```sh
-AWS_ACCESS_KEY= ...
-AWS_SECRET_ACCESS_KEY= ...
+AWS_ACCESS_KEY=<AWS_ACCESS_KEY>
+AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY>
 AWS_REGION=ap-northeast-1
 KVS_STREAM_NAME=yukichannelXX
 GST_PLUGIN_PATH=<path to build> (~/amazon-kinesis-video-streams-producer-sdk-cpp/build)
@@ -28,4 +28,28 @@ LD_LIBRARY_PATH=<path to lib> (~/amazon-kinesis-video-streams-producer-sdk-cpp/o
 ```shell
 git clone https://github.com/nagaokayuji/yukichannel-producer.git
 sh yukichannel-producer/run.sh
+```
+
+## Daemon example
+
+```
+# /etc/sysconfig/root
+<env vars>
+```
+
+```
+# /etc/systemd/system/yukichannel.service
+[Unit]
+Description=Yukichannel
+After=network.target
+
+[Service]
+User=root
+Type=simple
+ExecStart=/home/<user>/yukichannel-producer/run.sh
+EnvironmentFile=/etc/sysconfig/root
+
+[Install]
+WantedBy = multi-user.target
+
 ```
